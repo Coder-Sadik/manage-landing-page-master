@@ -1,0 +1,15 @@
+{
+	"name": "manage-landing-page-master",
+	"version": "1.0.0",
+	"description": "# [View Profile](https://www.frontendmentor.io/profile/Coder-Sadik)",
+	"main": "index.js",
+	"scripts": {
+		"build": "tailwindcss -i ./src/input.css -o ./output/output.css -w"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"tailwindcss": "^3.4.13"
+	}
+}

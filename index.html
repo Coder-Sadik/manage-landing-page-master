@@ -1,28 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- favicon -->
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<!-- google fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- css file -->
+		<link rel="stylesheet" href="output/output.css" />
+		<!-- title -->
+		<title>Frontend Mentor | Manage landing page</title>
+	</head>
+	<body class="font-vietnamPro min-h-screen">
+		<!-- nav bar  -->
+		<nav class="flex justify-between items-center max-w-[90vw] mx-auto">
+			<!-- logo  -->
+			<div class=""><img src="Assets/images/logo.svg" alt="logo" /></div>
+			<!-- nav menu  -->
+			<div class="">
+				<!-- nav icon  -->
+				<div class="">
+					<img src="Assets/images/icon-hamburger.svg" alt="hamburger icon" />
+				</div>
+				<div class="">
+					<ul class="md:flex hidden">
+						<li class="mx-2 p-2"><a href="#">Pricing</a></li>
+						<li class="mx-2 p-2"><a href="#">Product</a></li>
+						<li class="mx-2 p-2"><a href="#">About Us</a></li>
+						<li class="mx-2 p-2"><a href="#">Careers</a></li>
+						<li class="mx-2 p-2"><a href="#">Community</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- button  -->
+			<button class="sm:hidden bg-BrightRed text-white px-4 py-2 rounded-3xl">
+				Get Started
+			</button>
+		</nav>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Manage landing page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Pricing
-  Product
-  About Us
-  Careers
-  Community
-
-  Get Started
+		<!-- 
 
   Bring everyone together to build better products.
 
@@ -31,7 +58,7 @@
 
   Get Started
 
-  What’s different about Manage?
+  What's different about Manage?
 
   Manage provides all the functionality your team needs, without 
   the complexity. Our software is tailor-made for modern digital 
@@ -46,7 +73,7 @@
   02
   Advanced built-in reports
   Set internal delivery estimates and track progress toward company 
-  goals. Our customisable dashboard helps you build out the reports 
+  goals.  dashboard helps you build out the reports 
   you need to keep key stakeholders informed.
 
   03
@@ -62,17 +89,17 @@
   visibility on larger milestones at all times keeps everyone motivated.”
 
   Ali Bravo
-  “We have been able to cancel so many other subscriptions since using 
-  Manage. There is no more cross-channel confusion and everyone is much 
-  more focused.”
+  “We have been able to cancel so many other subscriptions  
+  Manage. There is no more cross- and everyone is much 
+  .”
 
   Richard Watts
-  “Manage allows us to provide structure and process. It keeps us organized 
-  and focused. I can’t stop recommending them to everyone I talk to!”
+  “Manage  to provide structure and process. It  organized 
+  . I can’t stop recommending them to everyone I talk to!”
 
   Shanai Gough
-  “Their software allows us to track, manage and collaborate on our projects 
-  from anywhere. It keeps the whole team in-sync without being intrusive.”
+  “Their software  to track, manage and collaborate on our projects 
+  from anywhere. It keeps the whole team in-sync without .”
 
   Get Started
 
@@ -82,7 +109,7 @@
   Home
   Pricing
   Products
-  About Us
+  
   Careers
   Community
   Privacy Policy
@@ -90,12 +117,6 @@
   Updates in your inbox…
   Go
 
-  Copyright 2020. All Rights Reserved
-
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+  Copyright 2020. All Rights Reserved -->
+	</body>
 </html>
