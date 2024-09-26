@@ -16,6 +16,11 @@ module.exports = {
 			fontFamily: {
 				vietnamPro: ["Be Vietnam Pro", "sans-serif"],
 			},
+			backgroundImage: {
+				bgMobile: "url('./Assets/images/bg-simplify-section-mobile.svg')",
+				bgTablet: "url('./Assets/images/bg-tablet-pattern.svg')",
+				bgDesktop: "url('./Assets/images/bg-simplify-section-desktop.svg')",
+			},
 		},
 	},
 	plugins: [],

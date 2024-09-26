@@ -22,33 +22,132 @@
 		<!-- title -->
 		<title>Frontend Mentor | Manage landing page</title>
 	</head>
+
 	<body class="font-vietnamPro min-h-screen">
 		<!-- nav bar  -->
-		<nav class="flex justify-between items-center max-w-[90vw] mx-auto">
-			<!-- logo  -->
-			<div class=""><img src="Assets/images/logo.svg" alt="logo" /></div>
-			<!-- nav menu  -->
-			<div class="">
-				<!-- nav icon  -->
-				<div class="">
-					<img src="Assets/images/icon-hamburger.svg" alt="hamburger icon" />
-				</div>
-				<div class="">
-					<ul class="md:flex hidden">
-						<li class="mx-2 p-2"><a href="#">Pricing</a></li>
-						<li class="mx-2 p-2"><a href="#">Product</a></li>
-						<li class="mx-2 p-2"><a href="#">About Us</a></li>
-						<li class="mx-2 p-2"><a href="#">Careers</a></li>
-						<li class="mx-2 p-2"><a href="#">Community</a></li>
+		<header>
+			<nav
+				class="flex justify-between items-center wrapper my-5 min-h-14 z-30 bg-white mt-10"
+			>
+				<!--brand logo  -->
+				<div class=""><img src="Assets/images/logo.svg" alt="logo" /></div>
+				<!-- nav menu  -->
+				<div class="z-30">
+					<!-- nav icon  -->
+					<div class="md:hidden">
+						<button
+							id="hamburger-icon"
+							aria-label="Open menu"
+							aria-expanded="false"
+						>
+							<img
+								src="Assets/images/icon-hamburger.svg"
+								alt="hamburger icon"
+							/>
+						</button>
+
+						<!-- close button  -->
+						<button id="close-icon" class="hidden" aria-label="Close menu">
+							<img src="Assets/images/icon-close.svg" alt="close icon" />
+						</button>
+					</div>
+
+					<!-- nav items  -->
+					<ul
+						class="hidden md:flex absolute md:static w-[90vw] md:w-max inset-x-5 md:inset-x-0 py-8 md:py-0 mt-8 md:mt-0 text-center bg-white text-DarkBlue"
+					>
+						<li class="mx-2 p-2 hover:text-DarkGrayishBlue font-medium">
+							<a href="#">Pricing</a>
+						</li>
+						<li class="mx-2 p-2 hover:text-DarkGrayishBlue font-medium">
+							<a href="#">Product</a>
+						</li>
+						<li class="mx-2 p-2 hover:text-DarkGrayishBlue font-medium">
+							<a href="#">About Us</a>
+						</li>
+						<li class="mx-2 p-2 hover:text-DarkGrayishBlue font-medium">
+							<a href="#">Careers</a>
+						</li>
+						<li class="mx-2 p-2 hover:text-DarkGrayishBlue font-medium">
+							<a href="#">Community</a>
+						</li>
 					</ul>
 				</div>
-			</div>
-			<!-- button  -->
-			<button class="sm:hidden bg-BrightRed text-white px-4 py-2 rounded-3xl">
-				Get Started
-			</button>
-		</nav>
+				<!-- button  -->
+				<button
+					class="hidden lg:block bg-BrightRed text-white px-4 py-2 rounded-3xl"
+				>
+					Get Started
+				</button>
+			</nav>
+		</header>
 
+		<!-- Full-screen Backdrop -->
+		<div
+			id="backdrop"
+			class="fixed inset-0 bg-black bg-opacity-30 z-10 hidden"
+		></div>
+
+		<!-- hero section  -->
+		<section class="wrapper">
+			<div
+				class="md:flex flex-row-reverse items-center justify-between text-center md:text-left"
+			>
+				<!-- hero img  -->
+				<div class="flex-1">
+					<img
+						class="max-h-[450px] mx-auto"
+						src="Assets/images/illustration-intro.svg"
+						alt="intro img"
+					/>
+				</div>
+				<!-- hero texts  -->
+				<div class="flex-1">
+					<h1 class="text-4xl md:text-5xl font-bold text-DarkBlue leading-snug">
+						Bring everyone together to build better products.
+					</h1>
+					<p class="my-4 text-DarkGrayishBlue max-w-96">
+						Manage makes it simple for software teams to plan day-to-day tasks
+						while keeping the larger team goals in view.
+					</p>
+					<button class="bg-BrightRed text-white px-6 py-3 rounded-3xl">
+						Get Started
+					</button>
+				</div>
+			</div>
+		</section>
+
+		<!-- benefits section  -->
+		<section>
+			<!-- benefits container  -->
+			<div class="wrapper md:flex justify-between">
+				<!-- benefits heading  -->
+				<div class="text-center md:text-left flex-1">
+					<h1 class="text-4xl md:text-5xl font-bold text-DarkBlue leading-snug">
+						What's different about Manage?
+					</h1>
+					<p class="my-4 text-DarkGrayishBlue max-w-320px">
+						Manage provides all the functionality your team needs, without the
+						complexity. Our software is tailor-made for modern digital product
+						teams.
+					</p>
+				</div>
+				<!-- benefits list  -->
+				<div class="flex-1">
+          <!-- benefit-1  -->
+					<div class="">
+						<h2 class="text-DarkBlue text-2xl">
+							<span>01</span>Track company-wide progress
+						</h2>
+						<p class="text-DarkGrayishBlue">
+							See how your day-to-day tasks fit into the wider vision. Go from
+							tracking progress at the milestone level all the way done to the
+							smallest of details. Never lose sight of the bigger picture again.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
 		<!-- 
 
   Bring everyone together to build better products.
@@ -58,18 +157,13 @@
 
   Get Started
 
-  What's different about Manage?
+  
 
-  Manage provides all the functionality your team needs, without 
-  the complexity. Our software is tailor-made for modern digital 
-  product teams. 
+  
 
   01
   Track company-wide progress
-  See how your day-to-day tasks fit into the wider vision. Go from 
-  tracking progress at the milestone level all the way done to the 
-  smallest of details. Never lose sight of the bigger picture again.
-
+  
   02
   Advanced built-in reports
   Set internal delivery estimates and track progress toward company 
@@ -118,5 +212,7 @@
   Go
 
   Copyright 2020. All Rights Reserved -->
+
+		<script src="Assets/Javascript/script.js"></script>
 	</body>
 </html>
