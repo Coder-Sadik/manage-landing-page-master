@@ -25,57 +25,68 @@ backdrop.addEventListener("click", () => {
 });
 
 //carousel
-const carousel = document.getElementById("carousel");
+// Function to fetch and populate carousel from JSON data
+async function fetchCarouselData() {
+	const response = await fetch("Assets/Javascript/persons.json");
+	const data = await response.json();
 
-// Function to handle swipe gestures
-let isDown = false;
-let startX;
-let scrollLeft;
+	const carousel = document.getElementById("mySwiper");
+	// Generate carousel items
+	data.people.forEach((person) => {
+		const carouselItem = document.createElement("div");
+		carouselItem.classList.add(
+			"flex-shrink-0", // Ensures items don't shrink and stay in one line
+			"mx-auto",
+			"max-w-[90vw]",
+			"md:max-w-[450px]",
+			"md:px-10",
+			"bg-VeryLightGray",
+			"relative",
+			"py-10",
+			"px-5",
+			"swiper-slide",
+			"cursor-pointer"
+		);
 
-carousel.addEventListener("mousedown", (e) => {
-	isDown = true;
-	carousel.classList.add("active");
-	startX = e.pageX - carousel.offsetLeft;
-	scrollLeft = carousel.scrollLeft;
-});
+		carouselItem.innerHTML = `
+	  <img class="h-14 absolute left-[39vw] md:left-[193px] -top-[28px]" src="${person.profile_img}" alt="${person.name}'s image" />
+	  <p class="font-bold text-DarkBlue my-4">${person.name}</p>
+	  <p class="text-DarkGrayishBlue">${person.comment}</p>
+	`;
 
-carousel.addEventListener("mouseleave", () => {
-	isDown = false;
-	carousel.classList.remove("active");
-});
-
-carousel.addEventListener("mouseup", () => {
-	isDown = false;
-	carousel.classList.remove("active");
-});
-
-carousel.addEventListener("mousemove", (e) => {
-	if (!isDown) return;
-	e.preventDefault();
-	const x = e.pageX - carousel.offsetLeft;
-	const walk = (x - startX) * 2; // Scroll-fast
-	carousel.scrollLeft = scrollLeft - walk;
-});
-
-// Swipe functionality for touch devices
-let touchStartX;
-let touchEndX;
-
-carousel.addEventListener("touchstart", (e) => {
-	touchStartX = e.changedTouches[0].screenX;
-});
-
-carousel.addEventListener("touchend", (e) => {
-	touchEndX = e.changedTouches[0].screenX;
-	handleSwipe();
-});
-
-function handleSwipe() {
-	if (touchStartX - touchEndX > 50) {
-		// Swipe left
-		carousel.scrollBy({ left: 300, behavior: "smooth" });
-	} else if (touchEndX - touchStartX > 50) {
-		// Swipe right
-		carousel.scrollBy({ left: -300, behavior: "smooth" });
-	}
+		carousel.appendChild(carouselItem);
+	});
 }
+
+//for carousel
+const swiper = new Swiper(".swiper", {
+	// Optional parameters
+	direction: "horizontal",
+	loop: false,
+
+	// If we need pagination
+	pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+	},
+
+	// Navigation arrows
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+
+	// And if we need scrollbar
+	scrollbar: {
+		el: ".swiper-scrollbar",
+	},
+	breakpoints: {
+		1024: {
+			slidesPerView: 4,
+			loop: true,
+		},
+	},
+});
+
+// Fetch carousel data on DOMContentLoaded
+document.addEventListener("DOMContentLoaded", fetchCarouselData);

@@ -10,6 +10,11 @@
 			sizes="32x32"
 			href="./images/favicon-32x32.png"
 		/>
+		<!-- swiper carousel -->
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+		/>
 		<!-- google fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -200,54 +205,29 @@
 		<section>
 			<div class="text-center">
 				<h2 class="text-3xl text-DarkBlue font-bold">What they've said</h2>
-				<!-- review carousel  -->
-				<div class="flex items-center mt-16 mb-10">
-					<!-- review card  -->
-					<div
-						class="mx-auto max-w-[90vw] md:max-w-[400px] bg-VeryLightGray relative py-10 px-5"
-					>
-						<!-- person's image  -->
-						<img
-							class="h-14 absolute left-[39vw] md:left-[172px] -top-[28px]"
-							src="Assets/images/avatar-ali.png"
-							alt="reviewers's image"
-						/>
-						<!-- person's name -->
-						<p class="font-bold text-DarkBlue my-4">Ali Bravo</p>
-						<!-- review text  -->
-						<p class="text-DarkGrayishBlue">
-							“We have been able to cancel so many other subscriptions Manage.
-							There is no more cross- and everyone is much more focused.”
-						</p>
+
+				<div class="swiper bg-white p-0">
+					<div id="mySwiper" class="swiper-wrapper flex md:gap-10 mt-16 mb-10">
+						<!-- Carousel items will be dynamically generated here -->
 					</div>
+
+					<div class="swiper-pagination md:hidden mt-8"></div>
+
+					<div
+						class="swiper-button-prev hidden md:block mt-4 text-gray-400 hover:text-BrightRed"
+					></div>
+					<div
+						class="swiper-button-next hidden md:block mt-4 text-gray-400 hover:text-BrightRed"
+					></div>
 				</div>
-				<button class="bg-BrightRed text-white px-6 py-3 rounded-3xl">
+
+				<button class="bg-BrightRed text-white px-6 py-3 rounded-3xl mt-12">
 					Get Started
 				</button>
 			</div>
 		</section>
+
 		<!-- 
-  
-
-
-  Anisha Li
-  “Manage has supercharged our team’s workflow. The ability to maintain 
-  visibility on larger milestones at all times keeps everyone motivated.”
-
-  Ali Bravo
-  “We have been able to cancel so many other subscriptions  
-  Manage. There is no more cross- and everyone is much much focused 
-  .”
-
-  Richard Watts
-  “Manage  to provide structure and process. It  organized 
-  . I can’t stop recommending them to everyone I talk to!”
-
-  Shanai Gough
-  “Their software  to track, manage and collaborate on our projects 
-  from anywhere. It keeps the whole team in-sync without .”
-
-  Get Started
 
   Simplify how your team works today.
   Get Started
@@ -265,6 +245,8 @@
 
   Copyright 2020. All Rights Reserved -->
 
+		<!-- js for carousel  -->
+		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 		<script src="Assets/Javascript/script.js"></script>
 	</body>
 </html>

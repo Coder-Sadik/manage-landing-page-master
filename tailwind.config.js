@@ -1,6 +1,25 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: ["./*.{html,js}"],
+	purge: {
+		content: ["./*.html", "./Assets/**/*.js"],
+		safelist: [
+			"mx-auto",
+			"mySwiper",
+			"flex",
+			"md:gap-10",
+			"mt-16",
+			"mb-10",
+			"max-w-[90vw]",
+			"md:max-w-[450px]",
+			"md:px-10",
+			"bg-VeryLightGray",
+			"relative",
+			"py-10",
+			"px-5",
+			"swiper-slide",
+			"cursor-pointer",
+		],
+	},
 	theme: {
 		extend: {
 			colors: {
