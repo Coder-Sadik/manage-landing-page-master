@@ -81,8 +81,17 @@ const swiper = new Swiper(".swiper", {
 		el: ".swiper-scrollbar",
 	},
 	breakpoints: {
+		768: {
+			slidesPerView: 1,
+			loop: true,
+		},
+
 		1024: {
-			slidesPerView: 4,
+			slidesPerView: 2,
+			loop: true,
+		},
+		1280: {
+			slidesPerView: 3,
 			loop: true,
 		},
 	},

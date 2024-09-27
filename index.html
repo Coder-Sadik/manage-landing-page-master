@@ -79,11 +79,7 @@
 					</ul>
 				</div>
 				<!-- button  -->
-				<button
-					class="hidden lg:block bg-BrightRed text-white px-4 py-2 rounded-3xl"
-				>
-					Get Started
-				</button>
+				<button class="hidden lg:block btn">Get Started</button>
 			</nav>
 		</header>
 
@@ -115,9 +111,7 @@
 						Manage makes it simple for software teams to plan day-to-day tasks
 						while keeping the larger team goals in view.
 					</p>
-					<button class="bg-BrightRed text-white px-6 py-3 rounded-3xl">
-						Get Started
-					</button>
+					<button class="btn">Get Started</button>
 				</div>
 			</div>
 		</section>
@@ -221,29 +215,98 @@
 					></div>
 				</div>
 
-				<button class="bg-BrightRed text-white px-6 py-3 rounded-3xl mt-12">
-					Get Started
-				</button>
+				<button class="btn mt-12">Get Started</button>
 			</div>
 		</section>
 
-		<!-- 
+		<!-- team work section  -->
+		<section class="mb-0">
+			<div class="bg-BrightRed">
+				<div
+					class="flex flex-col md:flex-row justify-between items-center wrapper py-16"
+				>
+					<h2
+						class="text-3xl text-white font-bold max-w-96 text-center md:text-left"
+					>
+						Simplify how your team works today.
+					</h2>
+					<button
+						class="text-BrightRed bg-white px-6 py-3 rounded-3xl mt-10 md:mt-0 hover:bg-black hover:font-bold"
+					>
+						Get Started
+					</button>
+				</div>
+			</div>
+		</section>
 
-  Simplify how your team works today.
-  Get Started
-
-  Home
-  Pricing
-  Products
-  
-  Careers
-  Community
-  Privacy Policy
-
-  Updates in your inbox…
-  Go
-
-  Copyright 2020. All Rights Reserved -->
+		<!-- footer section  -->
+		<footer class="bg-black py-10 md:h-60">
+			<div class="wrapper h-[100%]">
+				<div
+					class="flex flex-col md:flex-row md:items-center justify-between h-[100%]"
+				>
+					<!-- input section  -->
+					<div class="flex flex-col gap-10 md:order-last">
+						<div class="md:flex">
+							<input
+								type="email"
+								placeholder="Updates in your inbox..."
+								class="rounded-3xl bg-white p-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-BrightRed w-[70%]"
+							/>
+							<button class="btn ml-4">Go</button>
+						</div>
+						<!-- Copyright  -->
+						<div class="mx-auto text-VeryLightGray mt-10 hidden md:block">
+							<p>Copyright 2020. All Rights Reserved</p>
+						</div>
+					</div>
+					<!-- footer links  -->
+					<div
+						class="flex justify-around md:justify-between text-VeryLightGray mt-10 md:mt-0 md:gap-10"
+					>
+						<div class="flex flex-col gap-4">
+							<a href="#">Home</a>
+							<a href="#">Pricing</a>
+							<a href="#">Products</a>
+							<a href="#">About Us</a>
+						</div>
+						<div class="flex flex-col gap-4">
+							<a href="#">Careers</a>
+							<a href="#">Community</a>
+							<a href="#">Privacy Policy</a>
+						</div>
+					</div>
+					<!-- social links and logo  -->
+					<div
+						class="flex flex-col h-[100%] md:flex-col-reverse mt-10 md:mt-0 items-center md:items-start justify-between md:order-first"
+					>
+						<!-- social icons  -->
+						<div class="social-icons flex justify-around w-[100%]">
+							<img src="Assets/images/icon-facebook.svg" alt="facebook icon" />
+							<img src="Assets/images/icon-youtube.svg" alt="youtube icon" />
+							<img src="Assets/images/icon-twitter.svg" alt="twitter icon" />
+							<img
+								src="Assets/images/icon-pinterest.svg"
+								alt="pinterest icon"
+							/>
+							<img
+								src="Assets/images/icon-instagram.svg"
+								alt="instagram icon"
+							/>
+						</div>
+						<img
+							class="w-52 mt-10 md:mt-0"
+							src="Assets/images/logo-white.svg"
+							alt="logo"
+						/>
+					</div>
+					<!-- Copyright  -->
+					<div class="mx-auto text-VeryLightGray mt-10 md:hidden">
+						<p>Copyright 2020. All Rights Reserved</p>
+					</div>
+				</div>
+			</div>
+		</footer>
 
 		<!-- js for carousel  -->
 		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
